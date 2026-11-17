@@ -48,7 +48,7 @@ export function sd(a) {
 // A 95% confidence interval is mean +/- 1.96 SE (normal approximation). With only a
 // few replicates per group a t interval would be very wide (12.7 SE for n = 2), so the
 // z multiplier is used for group means and for differences alike.
-export const Z95 = 1.959963984540054;
+const Z95 = 1.959963984540054;
 
 // Multiplier applied to SE: 1 for +/- 1 SE, 1.96 for a 95% CI
 export const errMult = (n, ci) => (ci ? Z95 : 1);

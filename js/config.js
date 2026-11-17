@@ -28,8 +28,7 @@ export const B12 = [];
     for (let c = 0; c < DW_COUNTS[j]; c++, k++) B12.push({ lo: oct12Edge(k), hi: oct12Edge(k + 1), dw: lab });
   });
 }
-export const NORM_LO = B12[0].lo;                     // 188.4 Hz
-export const NORM_HI = B12[B12.length - 1].hi;        // 7079.5 Hz
+const NORM_HI = B12[B12.length - 1].hi;        // 7079.5 Hz
 export const F_MIN = 180;                             // plotted / analysed range (Hz)
 export const F_MAX = Math.ceil(NORM_HI);              // 7080 Hz
 

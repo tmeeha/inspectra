@@ -1,7 +1,6 @@
 # Tests
 
-Both tests run in a browser through a local web server started in the `inspectra_js`
-folder (for example `python -m http.server 8000`).
+Both tests run in a browser.
 
 ## Comparison with the R app: `tests/test.html`
 
@@ -14,7 +13,7 @@ compares the results.
 Rscript tests/make_reference.R      # only needed when the R code or the fixtures change
 ```
 
-then open <http://localhost:8000/tests/test.html>. It covers WAV reading (8/16/24/32-bit
+then open `tests/test.html`. It covers WAV reading (8/16/24/32-bit
 integer, 32-bit float, stereo, 3-channel extensible, 48 kHz), Welch spectra with gating
 and pitch-range exclusion, tap detection (double hits, clipped taps, file edges), mode
 damping, the ringing-string check, all band sets, smoothing and normalization, pitch
@@ -32,12 +31,3 @@ Opens the app in a frame, loads both example sets and goes through every view, p
 axis, band set and error type, the main analysis settings, the validation messages,
 zooming, the hover readout, the pitch box, the damping table, uploading and removing a
 microphone calibration file, and the PNG, SVG, PDF and CSV exports.
-
-## Running headless
-
-Both pages print `DONE <passed> passed, <failed> failed` when finished, so they can be run
-without a visible browser, for example:
-
-```
-msedge --headless=new --virtual-time-budget=600000 --dump-dom http://localhost:8000/tests/test.html
-```

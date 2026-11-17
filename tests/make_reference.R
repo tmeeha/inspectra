@@ -1,6 +1,6 @@
 # Builds the reference results that the JavaScript port is checked against.
 #
-# Run from the inspectra_js folder, with the R app next to it (../inspectra_r):
+# Run from the inspectra folder, with the R app next to it (../inspectra_r):
 #   Rscript tests/make_reference.R
 # Writes synthetic recordings to tests/fixtures/ and the R results to
 # tests/fixtures/reference.json. Then open tests/test.html through a local web server

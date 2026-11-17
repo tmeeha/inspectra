@@ -72,7 +72,7 @@ The Record section in the Recordings box records from a microphone, so you can m
 
 Recordings are made as 24-bit mono WAV at the sound card's sample rate, with the browser's echo cancellation, noise suppression and automatic gain control switched off because they change the spectrum (a message appears if a browser ignores this). They are kept in the browser only until the page is closed or a new set of files is opened, so save the ones you want to keep: the **save button** (↓) beside a recorded file's name writes it as a WAV file (see 2.10). The input level and any gain applied by the sound card or the operating system are not known to the app, so levels from different sessions are comparable only if the microphone, its position and the system level are unchanged.
 
-Recording needs a page served from localhost or https (not opened as a local file), and microphone permission.
+Recording needs microphone permission.
 
 #### 2.2 Choosing and playing recordings
 

@@ -274,7 +274,7 @@ async function loadExample(set) {
     await loadFiles(items, set);
   } catch (e) {
     setBusy(null);
-    toast("The example recordings could not be loaded" + (location.protocol === "file:" ? " (open the app through a web server, not as a local file)." : "."), "error");
+    toast("The example recordings could not be loaded.", "error");
   }
 }
 
@@ -459,9 +459,7 @@ function bindRecorder() {
   const box = $("#rec-box");
   if (!micSupported()) {
     $("#rec-btn").disabled = true; $("#rec-device").disabled = true;
-    $("#rec-help").textContent = window.isSecureContext
-      ? "This browser cannot record audio."
-      : "Recording needs a secure page: open the app from http://localhost or https, not as a local file.";
+    $("#rec-help").textContent = "This browser cannot record audio.";
     return;
   }
   box.querySelector("#rec-help").textContent =
@@ -861,7 +859,7 @@ async function showTab(which) {
       $("#readme").innerHTML = marked.parse(md);
       readmeLoaded = true;
     } catch (e) {
-      $("#readme").textContent = "The Read Me could not be loaded" + (location.protocol === "file:" ? " (open the app through a web server)." : ".");
+      $("#readme").textContent = "The Read Me could not be loaded.";
     }
   }
   if (!readme && last) refresh();
